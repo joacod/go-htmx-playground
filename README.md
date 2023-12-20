@@ -15,7 +15,8 @@ Project created using [Go](https://go.dev/), [Echo](https://echo.labstack.com/),
 
 ## 📋 Prerequisites
 
-Install [Go](https://go.dev/) and [Templ](https://templ.guide/quick-start/installation).
+- Install [Go](https://go.dev/) and [Templ](https://templ.guide/quick-start/installation).
+- Download [Tailwind CSS standalone cli](https://tailwindcss.com/blog/standalone-cli), and copy it in the root folder.
 
 ## 💻 Development
 
@@ -25,6 +26,20 @@ If you modify any .templ file you need to generate the templates again.
 
 ```bash
 templ generate
+```
+
+**Tailwind CSS:**
+
+Start a watcher:
+
+```bash
+./tailwindcss -i css/input.css -o css/output.css --watch
+```
+
+Compile and minify your CSS for production:
+
+```bash
+./tailwindcss -i css/input.css -o css/output.css --minify
 ```
 
 **Run the development server:**

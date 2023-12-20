@@ -8,6 +8,6 @@ import (
 
 type HelloHandler struct{}
 
-func (h HelloHandler) HandleHelloShow(c echo.Context) error {
-	return render(c, hello.Show())
+func (h HelloHandler) HandleHelloPage(c echo.Context) error {
+	return render(c, hello.Page())
 }
