@@ -1,19 +1,37 @@
 package layout
 
+import (
+	"time"
+	"strconv"
+)
+
+var currentYear = strconv.Itoa(time.Now().Year())
+
 templ Base() {
-	<html>
+	<!DOCTYPE html>
+	<html lang="en">
 		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link rel="stylesheet" href="/output.css"/>
+			<link rel="icon" href="/favicon.png"/>
 			<title>Go + HTMX</title>
 		</head>
-		<body>
-			<header>
-				<h1>Go + HTMX</h1>
+		<body class="flex flex-col min-h-screen">
+			<header class="p-5 bg-indigo-700 w-full">
+				<h3 class="font-bold text-lg">
+					<img src="/favicon.png" alt="Logo" class="w-10 inline-block mr-2"/>
+					Go + HTMX
+				</h3>
 			</header>
-			<main id="content">
+			<main class="flex-1 p-10">
 				{ children... }
 			</main>
-			<footer>
-				<p>Footer</p>
+			<footer class="flex justify-center py-3 bg-indigo-900 w-full">
+				<p class="text-sm">
+					© 2023 - { currentYear } <img src="/favicon.png" alt="Logo" class="w-8 inline-block mx-2"/> Go +
+					HTMX
+				</p>
 			</footer>
 		</body>
 	</html>

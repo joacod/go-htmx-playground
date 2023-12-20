@@ -14,5 +14,8 @@
 # Go workspace file
 go.work
 
+# Tailwind CSS - Standalone cli
+tailwindcss
+
 # iOS
 .DS_Store
